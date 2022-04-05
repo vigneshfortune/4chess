@@ -8,7 +8,7 @@ const sio = require("socket.io")(server, {
     handlePreflightRequest: (req, res) => {
         const headers = {
             "Access-Control-Allow-Headers": "*",
-            "Access-Control-Allow-Origin": "https://master.d2dktscasgyu0l.amplifyapp.com/",
+            "Access-Control-Allow-Origin": "https://master.d2dktscasgyu0l.amplifyapp.com",
 		"Access-Control-Allow-Methods":"OPTIONS, GET",
 		"Access-Control-Request-Method":"*",
 
