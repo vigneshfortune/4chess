@@ -11,7 +11,7 @@ var text = 0;
 var player = -1;
 var getplayer = 0;
 const PORT = process.env.PORT || 5001;
-var socket = io.connect('http://localhost:${PORT}');
+var socket = io.connect('https://chess4play.herokuapp.com/');
 console.log(socket)
 socket.on('player', function(msg) {
 	if(getplayer == 1)
