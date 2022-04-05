@@ -10,8 +10,13 @@ var pos = [0, 0];
 var text = 0;
 var player = -1;
 var getplayer = 0;
-var socket = io.connect('https://chess4play.herokuapp.com/');
 
+var socket = io("https://chess4play.herokuapp.com/", {
+  withCredentials: true,
+  extraHeaders: {
+    "my-custom-header": "abcd"
+  }
+});
 socket.on('player', function(msg) {
 	if(getplayer == 1)
 	{
