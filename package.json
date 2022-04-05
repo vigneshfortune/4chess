@@ -2,10 +2,12 @@
   "name": "4chessnew",
   "version": "1.0.0",
   "description": "A four-player chess game playable in any browser using jQuery and websockets.",
-  "main": "jquery-1.11.1.min.js",
+  "main": "wsserver.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node wsserver.js",
+    "dev": "nodemon wsserver.js"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vigneshfortune/4chess.git"
