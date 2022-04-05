@@ -11,7 +11,7 @@ var text = 0;
 var player = -1;
 var getplayer = 0;
 
-var socket = io.connect('http://localhost:3000/');
+var socket = io.connect('https://master.d2dktscasgyu0l.amplifyapp.com/');
 
 socket.on('player', function(msg) {
 	if(getplayer == 1)
