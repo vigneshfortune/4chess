@@ -1,0 +1,26 @@
+{
+  "name": "4chessnew",
+  "version": "1.0.0",
+  "description": "A four-player chess game playable in any browser using jQuery and websockets.",
+  "main": "jquery-1.11.1.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vigneshfortune/4chess.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vigneshfortune/4chess/issues"
+  },
+  "homepage": "https://github.com/vigneshfortune/4chess#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "http": "^0.0.1-security",
+    "socket.io": "^4.4.1",
+    "ws": "^8.5.0"
+  }
+}

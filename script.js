@@ -10,9 +10,9 @@ var pos = [0, 0];
 var text = 0;
 var player = -1;
 var getplayer = 0;
-
-var socket = io.connect('https://master.d2dktscasgyu0l.amplifyapp.com/');
-
+const PORT = process.env.PORT || 5001;
+var socket = io.connect('http://localhost:${PORT}');
+console.log(socket)
 socket.on('player', function(msg) {
 	if(getplayer == 1)
 	{

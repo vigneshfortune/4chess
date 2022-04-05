@@ -1,7 +1,11 @@
 var e    = require('express');
-var sio  = require('socket.io');
-var http = require('http');
 
+const { Server } = require('socket.io'); 
+
+// Construct a socket
+const sio = new Server(server);
+var http = require('http');
+const PORT = process.env.PORT || 3000;
 var app = e();
 var server = http.createServer( app );
 
@@ -42,4 +46,4 @@ io.sockets.on('connection', function(socket) {
   });
 });
 
-server.listen(3000);
+server.listen(PORT, () => console.log(`Server is listening on port ${PORT}...`));
