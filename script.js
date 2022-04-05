@@ -11,7 +11,6 @@ var text = 0;
 var player = -1;
 var getplayer = 0;
 var socket = io.connect('https://chess4play.herokuapp.com/');
-
 socket.on('player', function(msg) {
 	if(getplayer == 1)
 	{
