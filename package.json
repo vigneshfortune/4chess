@@ -7,7 +7,6 @@
     "start": "node wsserver.js",
     "dev": "nodemon wsserver.js"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vigneshfortune/4chess.git"
@@ -22,6 +21,7 @@
   "dependencies": {
     "express": "^4.17.3",
     "http": "^0.0.1-security",
+    "http-server": "^14.1.0",
     "socket.io": "^4.4.1",
     "ws": "^8.5.0"
   }

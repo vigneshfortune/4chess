@@ -1,24 +1,15 @@
-var e    = require('express');
-
-var http = require('http');
 const PORT = process.env.PORT || 3000;
-var app = e();
-var server = http.createServer( app );
-const sio = require("socket.io")(server, {
-    handlePreflightRequest: (req, res) => {
-        const headers = {
-            "Access-Control-Allow-Headers": "*",
-            "Access-Control-Allow-Origin": "https://master.d2dktscasgyu0l.amplifyapp.com",
-		"Access-Control-Allow-Methods":"OPTIONS, GET",
-		"Access-Control-Request-Method":"*",
+const app = require("express")();
+const httpServer = require("http").createServer(app);
 
-            "Access-Control-Allow-Credentials": true
-        };
-        res.writeHead(200, headers);
-        res.end();
-    }
-});
-var io  = sio.listen(server);
+const io = require("socket.io")(httpServer, {
+	cors: {
+	  origin: "https://master.d2dktscasgyu0l.amplifyapp.com",
+	  methods: ["GET", "POST"],
+	  allowedHeaders: ["my-custom-header"],
+	  credentials: true
+	}
+  });
 
 var player = 0;
 var playerids = [];
@@ -55,4 +46,4 @@ io.sockets.on('connection', function(socket) {
   });
 });
 
-server.listen(PORT, () => console.log(`Server is listening on port ${PORT}...`));
+httpServer.listen(PORT, () => console.log(`Server is listening on port ${PORT}...`));
