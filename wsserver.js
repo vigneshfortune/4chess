@@ -59,6 +59,12 @@ socket.on('movecells', function(value) {
 	console.log("value " + value )
 
 });
+socket.on('indexFigure', function(newvalue) {
+
+	io.sockets.emit( 'indexedFigure', newvalue);
+	console.log("indexedFigure " + newvalue )
+
+});
 
 });
 
