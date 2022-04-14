@@ -4,7 +4,7 @@ const httpServer = require("http").createServer(app);
 
 const io = require("socket.io")(httpServer, {
 	cors: {
-	  origin: "https://main.d1kwkw2b6buf0t.amplifyapp.com",
+	  origin: "http://127.0.0.1:5501",
 	  methods: ["GET", "POST"],
 	  allowedHeaders: ["my-custom-header"],
 	  credentials: true
