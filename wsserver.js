@@ -48,7 +48,7 @@ io.sockets.on('connection', function(socket) {
 
   socket.on('countercount', function(msg,figureColorIndex) {
 
-	io.sockets.emit( 'counter', msg);
+	io.sockets.emit( 'counter', msg,figureColorIndex);
 	console.log("counter " + msg + " counter"+figureColorIndex)
 
 });
