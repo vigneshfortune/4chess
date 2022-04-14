@@ -44,6 +44,14 @@ io.sockets.on('connection', function(socket) {
 	if(login[3] == 1 && turn == 0){turn = 1; io.sockets.emit('turn', turn );}
     
   });
+
+  socket.on('countercount', function(msg) {
+
+		io.sockets.emit( 'counter', msg);
+
+    
+  });
+
 });
 
 httpServer.listen(PORT, () => console.log(`Server is listening on port ${PORT}...`));
