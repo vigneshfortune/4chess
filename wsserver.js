@@ -23,6 +23,7 @@ io.sockets.on('connection', function(socket) {
 	else{turn++;}
 	io.sockets.emit('turn', turn );
   });
+
   socket.on('findmatch', function(msg) {
 	if(!playerids.includes(socket.id))
 	{
@@ -44,10 +45,11 @@ io.sockets.on('connection', function(socket) {
 	if(login[3] == 1 && turn == 0){turn = 1; io.sockets.emit('turn', turn );}
     
   });
-  socket.on('countercount', function(msg) {
+
+  socket.on('countercount', function(msg,figureColorIndex) {
 
 	io.sockets.emit( 'counter', msg);
-	console.log("counter " + msg + " counter.")
+	console.log("counter " + msg + " counter"+figureColorIndex)
 
 });
  
