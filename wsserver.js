@@ -44,13 +44,13 @@ io.sockets.on('connection', function(socket) {
 	if(login[3] == 1 && turn == 0){turn = 1; io.sockets.emit('turn', turn );}
     
   });
-
   socket.on('countercount', function(msg) {
 
-		io.sockets.emit( 'counter', msg);
+	io.sockets.emit( 'counter', msg);
+	console.log("counter " + msg + " counter.")
 
-    
-  });
+});
+ 
 
 });
 
