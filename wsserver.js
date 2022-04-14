@@ -53,6 +53,12 @@ io.sockets.on('connection', function(socket) {
 
 });
  
+socket.on('movecells', function(value) {
+
+	io.sockets.emit( 'movedcell', value);
+	console.log("value " + value )
+
+});
 
 });
 
