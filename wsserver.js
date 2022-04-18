@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const app = require("express")();
 const httpServer = require("http").createServer(app);
 
@@ -53,16 +53,16 @@ io.sockets.on('connection', function(socket) {
 
 });
  
-socket.on('movecells', function(value) {
+socket.on('movecells', function(value,newValue) {
 
-	io.sockets.emit( 'movedcell', value);
-	console.log("value " + value )
+	io.sockets.emit( 'movedcell', value,newValue);
+	console.log("value " + value + newValue )
 
 });
-socket.on('indexFigure', function(newvalue) {
+socket.on('indexFigure', function(indexvalue,indexfigue) {
 
-	io.sockets.emit( 'indexedFigure', newvalue);
-	console.log("indexedFigure " + newvalue )
+	io.sockets.emit( 'indexedFigure', indexvalue,indexfigue);
+	console.log("indexedFigure " + indexvalue + indexfigue );
 
 });
 
